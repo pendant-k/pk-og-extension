@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* root container */
+.container {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.input-section {
+    margin-bottom: 24px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    background: #fafbfc;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+}
+
+.preview-section {
+    margin-bottom: 24px;
+}
+
+.preview-section h3 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.preview-container {
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    padding: 20px;
+}
+
+/* OG Image Styles */
+.og-image {
+    width: 100%;
+    max-width: 400px;
+    height: 210px; /* 1200:630 비율 유지 */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.og-image.modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.og-image.minimal {
+    background: #ffffff;
+    border: 2px solid #e1e5e9;
+}
+
+.og-image.gradient {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.og-image.dark {
+    background: #1a1a1a;
+}
+
+.og-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+}
+
+.og-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.og-subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.og-author {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Theme-specific text colors */
+.og-image.modern .og-title,
+.og-image.modern .og-subtitle,
+.og-image.modern .og-author {
+    color: #ffffff;
+}
+
+.og-image.minimal .og-title {
+    color: #2c3e50;
+}
+
+.og-image.minimal .og-subtitle,
+.og-image.minimal .og-author {
+    color: #7f8c8d;
+}
+
+.og-image.gradient .og-title,
+.og-image.gradient .og-subtitle,
+.og-image.gradient .og-author {
+    color: #ffffff;
+}
+
+.og-image.dark .og-title {
+    color: #ffffff;
+}
+
+.og-image.dark .og-subtitle {
+    color: #b0b0b0;
+}
+
+.og-image.dark .og-author {
+    color: #808080;
+}
+
+.og-decoration {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.og-image.modern .og-decoration {
+    background: #ffd54f;
+}
+
+.og-image.minimal .og-decoration {
+    background: #3498db;
+}
+
+.og-image.gradient .og-decoration {
+    background: #ffd93d;
+    opacity: 0.0;
+}
+
+.og-image.dark .og-decoration {
+    background: #00d4ff;
+}
+
+.og-decoration::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.1;
+}
+
+.button-section {
+    display: flex;
+    gap: 12px;
+}
+
+.primary-btn, .secondary-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.secondary-btn {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e1e5e9;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.secondary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+    .container {
+        padding: 16px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .button-section {
+        flex-direction: column;
+    }
+    
+    .og-image {
+        height: 180px;
+    }
+    
+    .og-title {
+        font-size: 20px;
+    }
+} 

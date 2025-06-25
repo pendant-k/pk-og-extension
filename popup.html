@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OG Image Generator</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Title -->
+            <h1>OG는 생성기</h1>
+
+            <!-- User Inputs -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="title">제목</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="블로그 제목을 입력하세요"
+                        maxlength="50"
+                    />
+                </div>
+
+                <div class="input-group">
+                    <label for="subtitle">부제목</label>
+                    <input
+                        type="text"
+                        id="subtitle"
+                        placeholder="부제목을 입력하세요 (선택사항)"
+                        maxlength="100"
+                    />
+                </div>
+
+                <div class="input-group">
+                    <label for="author">작성자</label>
+                    <input
+                        type="text"
+                        id="author"
+                        placeholder="작성자명을 입력하세요"
+                        maxlength="30"
+                    />
+                </div>
+
+                <div class="input-group">
+                    <label for="theme">테마 선택</label>
+                    <select id="theme">
+                        <option value="modern">모던</option>
+                        <option value="minimal">미니멀</option>
+                        <option value="gradient">그라데이션</option>
+                        <option value="dark">다크</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <h3>미리보기</h3>
+                <div class="preview-container">
+                    <div id="ogImage" class="og-image">
+                        <div class="og-content">
+                            <h2 class="og-title">블로그 제목을 입력하세요</h2>
+                            <p class="og-subtitle">부제목을 입력하세요</p>
+                            <p class="og-author">by 작성자명</p>
+                        </div>
+                        <div class="og-decoration"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-section">
+                <button id="generateBtn" class="primary-btn">
+                    이미지 생성
+                </button>
+                <button id="downloadBtn" class="secondary-btn" disabled>
+                    다운로드
+                </button>
+            </div>
+        </div>
+
+        <!-- 로컬 html2canvas 라이브러리 -->
+        <script src="html2canvas.min.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "OG Image Generator",
+  "description": "블로그용 이쁜 OG 이미지를 생성하고 다운로드할 수 있는 익스텐션",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.svg"
+  },
+  "permissions": [
+    "downloads"
+  ]
+}
